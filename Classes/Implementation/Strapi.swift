@@ -325,7 +325,7 @@ public class Strapi {
 					 autoExecute: Bool = true,
 					 callback: @escaping (RestResponse) -> Void) -> RestDataTask? {
 		
-		let path = "/" + request.contentType + (request.path ?? "")
+		let path = "/api/" + request.contentType + (request.path ?? "")
 		let task = service.json(method: request.method,
 								path: path,
 								parameters: request.parameters,
